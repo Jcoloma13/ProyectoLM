@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  color: black;
+}
+
+/**  START ** NAVBAR **/
+.navbar {
+  width: 98%;
+  height: 3rem;
+  display: flex;
+  margin-top: 0.5rem;
+}
+.navbar_icon {
+  width: 20%;
+  height: 100%;
+}
+.navbar_icon_logo {
+  all: unset;
+  margin-left: 0.6rem;
+}
+.navbar_search {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  border: 0.2rem solid #a3a0a0;
+  border-radius: 2rem;
+}
+.navbar_search_button {
+  all: unset;
+  width: 20%;
+  height: 100%;
+}
+.navbar_search_button_icon {
+  width: 70%;
+  height: 70%;
+  margin-left: 0.3rem;
+}
+.navbar_search_bar {
+  all: unset;
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+/** START ** CATEGORIES ** ICONS **/
+.categories {
+  margin: 0.4rem 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+}
+.categories ::-webkit-scrollbar {
+  display: none;
+}
+.categories_icon {
+  position: relative;
+  top: 0.3rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+.categories_icon_img {
+  width: 100%;
+  height: 2.5rem;
+}
+.categories_icon_text {
+  color: grey;
+}
+
+/** END ** CATEGORIES ** ICONS  **/
+/** START ** GENERAL ** CONTENT **/
+.general {
+  width: 99%;
+  overflow-y: scroll;
+  z-index: 1;
+}
+.general_slogan {
+  width: 100%;
+  height: 9rem;
+  text-align: center;
+}
+.general_slogan_text {
+  margin-top: 1.6rem;
+  font-size: 1.5rem;
+}
+.general_slider {
+  width: 100%;
+  height: 29rem;
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 0;
+}
+.general_slider_item {
+  flex-shrink: 0;
+  width: 100%;
+  left: 0;
+  position: sticky;
+  text-align: center;
+}
+.general_slider_item_free {
+  position: relative;
+  top: -25rem;
+  font-size: 1.3rem;
+  text-align: center;
+  padding-left: 0.5rem;
+  z-index: 5;
+  color: white;
+}
+.general_slider_item_free_ship {
+  font-style: italic;
+  font-size: 0.6rem;
+  position: relative;
+  left: 7rem;
+}
+.general_slider_item_summer {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  top: -27rem;
+  z-index: 3;
+  padding-left: 2.3rem;
+}
+.general_slider_item_tech {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: red;
+  position: relative;
+  top: -27rem;
+  z-index: 3;
+}
+.general_slider_item_img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.7rem;
+  scroll-snap-align: center;
+  filter: brightness(75%);
+}
+.general .general_slider::before {
+  content: url(./images/arrow.png);
+  height: 1rem;
+  top: 8rem;
+  left: 24rem;
+  position: relative;
+  z-index: 6;
+}
+.general .footer {
+  position: relative;
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+}
+.general .footer_divBar {
+  margin: auto;
+  width: 95%;
+  height: 0.3rem;
+  background-color: #8338ec;
+  border: none;
+  border-radius: 1rem;
+}
+.general .footer_part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.general .footer_part_label {
+  display: inline-block;
+  position: relative;
+}
+.general .footer_part_label_button {
+  width: 23rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.general .footer_part_label_button::after {
+  content: url(images/expand_arrow.svg);
+}
+.general .footer_part_label_inpt {
+  display: none;
+}
+.general .footer_part_label_inpt:checked + .footer_part_label_list {
+  display: block;
+}
+.general .footer_part_label_list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: none;
+}
+.general .footer_part_label_list_item {
+  margin: 1.2rem 0;
+}
+.general .footer_part_tittle {
+  margin-top: 1rem;
+}
+.general .footer_part_link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+}
+
+/** END ** GENERAL ** CONTENT **/
+/** START ** END PAGE ** MENU **/
+.end-menu {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: white;
+}
+.end-menu_category {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.end-menu_category_text {
+  font-size: 0.75rem;
+  color: #a3a0a0;
+}
+
+/** END ** END PAGE ** MENU **//*# sourceMappingURL=styles.css.map */
