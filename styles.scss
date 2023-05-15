@@ -12,9 +12,8 @@
 /**  START ** NAVBAR **/
 .navbar {
   width: 98%;
-  height: $standarHeight;
   display: flex;
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   &_icon {
     width: 20%;
     height: 100%;
@@ -32,7 +31,6 @@
     &_button {
       all: unset;
       width: 20%;
-      height: 100%;
       &_icon {
         width: 70%;
         height: 70%;
@@ -47,11 +45,9 @@
   }
 }
 /** START ** CATEGORIES ** ICONS **/
-
 .categories {
   margin: 0.4rem 0;
   width: 100%;
-  height: 5rem;
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -61,7 +57,6 @@
   }
   &_icon {
     position: relative;
-    top: 0.3rem;
     flex-shrink: 0; //para evitar que se contraiga si no hay tamaño
     display: flex;
     flex-direction: column;
@@ -86,8 +81,8 @@
   z-index: 1;
   &_slogan {
     width: 100%;
-    height: $standarHeight * 3;
     text-align: center;
+    padding-bottom: 2rem;
     &_text {
       margin-top: 1.6rem;
       font-size: 1.5rem;
@@ -117,6 +112,7 @@
         z-index: 5;
         color: white;
         &_ship {
+          color: white;
           font-style: italic;
           font-size: 0.6rem;
           position: relative;
@@ -124,9 +120,7 @@
         }
       }
       &_summer {
-        width: 100%;
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.3rem;
         color: white;
         position: relative;
         top: -27rem;
@@ -135,9 +129,8 @@
       }
       &_tech {
         width: 100%;
-        font-size: 2rem;
-        font-weight: bolder;
-        color: red;
+        font-size: 1.3rem;
+        color: white;
         position: relative;
         top: -27rem;
         z-index: 3;
@@ -168,7 +161,6 @@
     flex-direction: column;
     margin-top: 2rem;
     padding-bottom: 5rem;
-
     &_divBar {
       margin: auto;
       width: 95%;

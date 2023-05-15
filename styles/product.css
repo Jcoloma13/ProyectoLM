@@ -30,7 +30,7 @@
   height: 80%;
 }
 .product_item_title {
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   font-size: 1rem;
 }
 .product_item_price {
@@ -40,9 +40,7 @@
   color: #fb5607;
 }
 .product_item_love {
-  height: 2rem;
-  width: 2rem;
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.7rem;
   right: 1rem;
 }/*# sourceMappingURL=product.css.map */
