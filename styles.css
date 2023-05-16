@@ -61,7 +61,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
+  width: 22%;
 }
 .categories_icon_img {
   width: 100%;
@@ -151,6 +151,12 @@
   left: 24rem;
   position: relative;
   z-index: 6;
+  animation: arrow 2s infinite;
+}
+@keyframes arrow {
+  50% {
+    transform: translateX(-0.5rem);
+  }
 }
 .general .footer {
   position: relative;
@@ -205,7 +211,7 @@
   display: none;
 }
 .general .footer_part_label_list_item {
-  margin: 1.2rem 0;
+  margin: 1.2rem 0 1.2rem 1rem;
 }
 .general .footer_part_tittle {
   margin-top: 1rem;

@@ -1,0 +1,43 @@
+*{
+}
+.hear_small{
+    position: relative;
+    left: -4.7rem;
+    top: 2.8rem;
+    animation: small 10s infinite linear ;
+}
+
+.hear_big{
+    animation: big 10s infinite linear;
+}
+
+.bulldozer{
+    animation: bull 6s linear infinite;
+}
+
+@keyframes small{
+    50%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes big{
+    50%{
+        transform: rotate(-360deg);
+    }
+    70%{
+        transform: translateY(25rem);
+    }
+    80%{
+        transform: translateX(4rem) translateY(25rem);
+    }
+    100%{
+        transform: translateX(10rem) translateY(25rem);
+    }
+}
+
+@keyframes bull{
+    20%{
+        transform: translateX(4rem);
+    }
+}
