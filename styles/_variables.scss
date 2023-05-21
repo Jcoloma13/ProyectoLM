@@ -1,9 +1,18 @@
-$standarHeight: 3rem;
-$standarWidth: 24rem;
+
+//Fuentes de texto
 $generalFont: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+//Colores  
 $colorTierra: #fb5607;
 $colorAmarillo: #ffbe0b;
 $colorRosa: #ff006e;
 $colorAzul: #3a86ff;
 $colorLila: #8338ec;
+
+
+//Diseño responsive
+$XS : 340px;
+$S : 768px;
+$M: 1200px;
+$L: 1800px;

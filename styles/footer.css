@@ -7,6 +7,7 @@
   color: black;
 }
 
+/** START ** FOOTER **/
 .footer {
   position: relative;
   width: 100%;
@@ -32,11 +33,11 @@
   justify-content: start;
 }
 .footer_part_label {
-  display: inline-block;
+  width: 100%;
   position: relative;
 }
 .footer_part_label_button {
-  width: 23rem;
+  width: 100%;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -46,6 +47,10 @@
 }
 .footer_part_label_button::after {
   content: url(../images/expand_arrow.svg);
+  margin-right: 1rem;
+}
+.footer_part_label_button_text {
+  margin-left: 1rem;
 }
 .footer_part_label_inpt {
   display: none;
@@ -69,4 +74,43 @@
   text-decoration: none;
   font-size: 1rem;
   color: black;
-}/*# sourceMappingURL=footer.css.map */
+}
+
+/** END ** FOOTER **/
+/** START RESPONSIVE DESIGN **/
+@media (min-width: 768px) {
+  .footer_part_label_button_text {
+    margin-left: 1.5rem;
+  }
+  .footer_part_label_button::after {
+    margin-right: 1.5rem;
+  }
+  .footer_part_label_list {
+    margin-left: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    padding-bottom: 1rem;
+  }
+  .content_photo {
+    width: 80%;
+  }
+  .content_aboutUs {
+    margin-left: 10%;
+  }
+  .content_text {
+    margin: 1rem 10%;
+  }
+  .content_slogan {
+    padding: 1rem 10%;
+    line-height: 7rem;
+  }
+  .footer_part_label_button_text {
+    margin-left: 2.5rem;
+  }
+  .footer {
+    margin-top: 2rem;
+  }
+}
+/** END RESPONSIVE DESIGN **//*# sourceMappingURL=footer.css.map */

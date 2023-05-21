@@ -1,101 +1,155 @@
 * {
   margin: 0;
   padding: 0;
+  font-size: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/** START ** CONSTRUCTION **/
 .content {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40rem;
+  height: 30rem;
 }
 .content_text {
   width: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.5;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-path {
-  padding: 0;
+.content::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  bottom: -2rem;
+  background-color: #8b5a2b;
 }
-
-svg {
-  padding: 0;
+.content_tittle-logo {
+  width: 100%;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8338ec;
+}
+.content_tittle-logo_tittle {
+  color: #ffbe0b;
+  margin-right: 2rem;
+}
+.content_tittle-logo_logo {
+  margin-left: 1rem;
 }
 
 .rosca {
   width: 340px;
   display: flex;
-  height: 15rem;
 }
 .rosca_big {
-  width: 50%;
+  position: absolute;
+  width: 6rem;
   height: -moz-max-content;
   height: max-content;
-  animation: hola 15s linear;
+  animation: big-hear 15s linear forwards;
   transform-origin: center;
 }
 .rosca_small {
-  width: 50%;
-  height: 70%;
   position: relative;
-  top: 2rem;
-  left: -1.9rem;
+  width: 6rem;
+  top: 1rem;
+  left: 5rem;
+  animation: small-hear 15s linear forwards;
+  transform-origin: center;
 }
 
 .bull {
+  position: absolute;
   align-self: flex-start;
-  transform: translateX(-14rem);
-  animation: bull 12s linear 3s;
+  animation: bull 10s linear 6s;
+  bottom: -3rem;
 }
 
-.juan {
-  animation: juan 9s linear 5s;
+.pala-barra {
+  animation: pala-barra 10s linear 6s;
 }
 
-.pedro {
-  animation: pedro 9s linear 5s;
+.pala {
+  animation: pala 10s linear 6s;
 }
 
-@keyframes hola {
-  24% {
-    transform: rotateZ(360deg);
-  }
+.container {
+  width: 10rem;
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0;
+}
+
+/** START ** ANIMATION **/
+@keyframes big-hear {
   25% {
-    transform: translateY(0);
+    transform: translateY(0) rotateZ(360deg);
   }
   50% {
-    transform: translateY(27rem) rotateY(640deg);
+    transform: rotateZ(-360deg) translateY(22rem) rotateX(70deg);
   }
-  93% {
-    opacity: 1;
+  55% {
+    transform: rotateZ(-360deg) translateY(22rem) rotateX(70deg);
+  }
+  90% {
+    transform: translateY(20rem) translateX(28rem);
   }
   100% {
-    transform: translateY(25rem) translateX(340px);
-    opacity: 0;
+    transform: translateX(37rem) translateY(21rem);
+  }
+}
+@keyframes small-hear {
+  25% {
+    transform: translateY(0) rotateZ(-360deg);
+  }
+  50% {
+    transform: translateY(21rem) rotateY(640deg) rotateX(60deg);
+  }
+  65% {
+    transform: translateY(21rem) rotateY(640deg) rotateX(60deg);
+  }
+  100% {
+    transform: translateX(33rem) translateY(21rem);
   }
 }
 @keyframes bull {
   90% {
     opacity: 1;
-    transform: translateX(180px);
+    transform: translateX(50rem);
+  }
+  95% {
+    opacity: 1;
+    transform: translateX(50rem);
   }
   100% {
     opacity: 0;
-    transform: translateX(180px);
+    transform: translateX(50rem);
   }
 }
-@keyframes juan {
+@keyframes pala-barra {
   50% {
     transform: rotate(0);
   }
-  100% {
+  90% {
     transform: rotateZ(-6deg) rotateY(22deg);
   }
 }
-@keyframes pedro {
+@keyframes pala {
   50% {
     transform: rotate(0);
   }
-  100% {
+  90% {
     transform: rotateX(25deg) rotateY(-1deg);
   }
 }/*# sourceMappingURL=construction.css.map */
