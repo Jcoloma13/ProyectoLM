@@ -76,6 +76,29 @@
   color: black;
 }
 
+.link-hover {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+.link-hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8338ec;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.link-hover:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 /** END ** FOOTER **/
 /** START RESPONSIVE DESIGN **/
 @media (min-width: 768px) {
@@ -228,7 +251,7 @@
 }
 .content_contact_button {
   margin-top: 1rem;
-  width: 20%;
+  width: 8rem;
   border: none;
   background-color: #8338ec;
   color: white;
@@ -281,6 +304,7 @@
   font-size: 1.5rem;
 }
 
+/** END ** GENERAL ** CONTENT **/
 /** START RESPONSIVE DESING **/
 @media (min-width: 768px) {
   .content_aboutUs {
@@ -312,16 +336,44 @@
     transform: rotate(0);
   }
   30% {
-    transform: translateX(8rem) rotate(0);
+    transform: translateX(6rem) rotate(0);
   }
   50% {
-    transform: translate(7.5rem, 0px) rotate(180deg);
+    transform: translate(6rem, 0px) rotate(180deg);
   }
   80% {
     transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+.left-photo {
+  animation: enterLeft 2s linear 2s;
+}
+
+@keyframes enterLeft {
+  from {
+    -webkit-clip-path: inset(0 100% 0 0);
+            clip-path: inset(0 100% 0 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+.right-photo {
+  animation: enterRight 2s linear 2s;
+}
+
+@keyframes enterRight {
+  from {
+    -webkit-clip-path: inset(0 0 0 100%);
+            clip-path: inset(0 0 0 100%);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
   }
 }
 /** END ANIMATIONS **//*# sourceMappingURL=about-us.css.map */

@@ -68,6 +68,7 @@
     &_small {
       width: 50%;
       aspect-ratio: 1/1;
+
     }
   }
   &_aboutUs {
@@ -213,5 +214,28 @@
     transform: rotate(360deg);
   }
 }
+//photo enter animation
+.left-photo{
+  animation: enterLeft 2s linear 2s;
+}
+  @keyframes enterLeft{
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
 
+  .right-photo{
+    animation: enterRight 2s linear 2s;
+  }
+  @keyframes enterRight {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
 /** END ANIMATIONS **/

@@ -179,7 +179,7 @@
 /** START ** END PAGE ** MENU **/
 .end-menu {
   width: 100%;
-  height: $standarHeight;
+  height: 34rem;
   position: fixed;
   bottom: 0;
   z-index: 5;
@@ -324,8 +324,8 @@
       }
       &:hover {
         background-color: #e6e6e6;
-        -webkit-transition: color 0.5s ease-out;
-        transition: all 0.5s ease-out;
+        -webkit-transition: black 0.5s ease-out;
+        transition: black 0.5s ease-out;
       }
     }
   }
@@ -344,7 +344,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      transition: all 5s ease-in-out;
+      transition: black 5s ease-in-out;
       &:hover :first-child {
         transform: rotate(45deg) translate(10px, 10px);
       }

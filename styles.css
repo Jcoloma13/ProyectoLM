@@ -178,7 +178,7 @@
 /** START ** END PAGE ** MENU **/
 .end-menu {
   width: 100%;
-  height: 3rem;
+  height: 34rem;
   position: fixed;
   bottom: 0;
   z-index: 5;
@@ -320,7 +320,7 @@
   }
   .end-menu_category:hover {
     background-color: #e6e6e6;
-    transition: all 0.5s ease-out;
+    transition: black 0.5s ease-out;
   }
   .burguer {
     display: block;
@@ -338,7 +338,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    transition: all 5s ease-in-out;
+    transition: black 5s ease-in-out;
   }
   .burguer_button:hover :first-child {
     transform: rotate(45deg) translate(10px, 10px);
