@@ -112,7 +112,7 @@
     }
     &_button {
       margin-top: 1rem;
-      width: 20%;
+      width: 8rem;
       border: none;
       background-color: $colorLila;
       color: white;
@@ -201,10 +201,10 @@
     transform: rotate(0);
   }
   30% {
-    transform: translateX(8rem) rotate(0);
+    transform: translateX(6rem) rotate(0);
   }
   50% {
-    transform: translate(7.5rem, 0px) rotate(180deg);
+    transform: translate(6rem, 0px) rotate(180deg);
   }
   80% {
     transform: rotate(180deg);
