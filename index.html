@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./styles/product.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/navbar-icons/logo-icon.svg"
+      type="image/x-icon"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!--With this script we add the product photos that we have in the json-->
+    <script>
+      $(document).ready(function () {
+        $.getJSON("./productos.json", function (data) {
+          //Loop through the array elements in the json
+          data.forEach(function (item, index) {
+            //Create an image element and set the attribute src and the class.
+            var img = $("<img>");
+            img.attr("src", item.url);
+            img.addClass("photo");
+            //We look for the image
+            var containerId = "contenedor-imagenes" + (index + 1);
+            var container = $("#" + containerId);
+            //Add the image to the container
+            container.append(img);
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- STAR -- NAVBAR -->
@@ -250,13 +276,7 @@
       <!--START -- FAVORITES -- PRODUCTS  -->
       <div class="product">
         <div class="product_item">
-          <div class="product_item_img">
-            <img
-              src="./images/products/iphone/iphoneBack.jpg"
-              alt="foto iphone13"
-              class="photo"
-            />
-          </div>
+          <div class="product_item_img" id="contenedor-imagenes1"></div>
           <div>
             <h2 class="product_item_title">Iphone13</h2>
             <div class="product_item_price">500€</div>
@@ -283,13 +303,7 @@
           </div>
         </div>
         <div class="product_item">
-          <div class="product_item_img">
-            <img
-              src="./images/products/barbacoa/barbacoaFront.jpg"
-              alt="foto barbacoa"
-              class="photo"
-            />
-          </div>
+          <div class="product_item_img" id="contenedor-imagenes2"></div>
           <div>
             <h2 class="product_item_title">Barbacoa</h2>
             <div class="product_item_price">90€</div>
@@ -316,13 +330,7 @@
           </div>
         </div>
         <div class="product_item">
-          <div class="product_item_img">
-            <img
-              src="./images/products/bicicleta/bicicleta.jpg"
-              alt="foto bicicleta"
-              class="photo"
-            />
-          </div>
+          <div class="product_item_img" id="contenedor-imagenes3"></div>
           <div>
             <h2 class="product_item_title">Bicicleta Scott</h2>
             <div class="product_item_price">1900€</div>
@@ -349,13 +357,7 @@
           </div>
         </div>
         <div class="product_item">
-          <div class="product_item_img">
-            <img
-              src="./images/products/sillaIkea/silladelante.jpg"
-              alt="foto silla"
-              class="photo"
-            />
-          </div>
+          <div class="product_item_img" id="contenedor-imagenes4"></div>
           <div>
             <h2 class="product_item_title">Silla mecedora</h2>
             <div class="product_item_price">40€</div>
@@ -430,17 +432,20 @@
           <label class="footer_part_label">
             <div class="footer_part_label_button">
               <span class="footer_part_label_button_text">
-                <a href="./pages/construction.html">Legal</a></span>
+                <a href="./pages/construction.html">Legal</a></span
+              >
             </div>
             <input type="checkbox" class="footer_part_label_inpt" />
             <ul class="footer_part_label_list">
               <li class="footer_part_label_list_item">
-                <a href="./pages/construction.html">Aviso legal</a></li>
-              <li class="footer_part_label_list_item">
-               <a href="./pages/construction.html">Política de privacidad</a>
+                <a href="./pages/construction.html">Aviso legal</a>
               </li>
               <li class="footer_part_label_list_item">
-                <a href="./pages/construction.html">Cookies</a></li>
+                <a href="./pages/construction.html">Política de privacidad</a>
+              </li>
+              <li class="footer_part_label_list_item">
+                <a href="./pages/construction.html">Cookies</a>
+              </li>
             </ul>
           </label>
         </div>
@@ -457,7 +462,7 @@
         <span class="burguer_button_bar"></span>
       </button>
     </div>
-    <di class="end-menu">
+    <div class="end-menu">
       <a class="end-menu_category" href="#top">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -479,91 +484,91 @@
         </svg>
         <p class="end-menu_category_text">Inicio</p>
       </a>
-        <a class="end-menu_category" href="./pages/construction.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-mail"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#a3a0a0"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            title="Buzón"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-            />
-            <path d="M3 7l9 6l9 -6" />
-          </svg>
-          <p class="end-menu_category_text">Buzón</p>
-        </a>
-        <a class="end-menu_category"  href="./pages/construction.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-currency-dollar"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#a3a0a0"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            title="Vender"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"
-            />
-            <path d="M12 3v3m0 12v3" />
-          </svg>
-          <p class="end-menu_category_text">Vender</p>
-        </a>
-        <a class="end-menu_category"  href="./pages/construction.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-heart"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#a3a0a0"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            title="Favoritos"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
-            />
-          </svg>
-          <p class="end-menu_category_text">Favoritos</p>
-        </a>
-        <a class="end-menu_category"  href="./pages/construction.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-user"
-            width="48"
-            height="48"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#a3a0a0"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            title="perfil"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-          </svg>
-          <p class="end-menu_category_text">Perfil</p>
-        </a>
+      <a class="end-menu_category" href="./pages/construction.html">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-mail"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#a3a0a0"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          title="Buzón"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+          />
+          <path d="M3 7l9 6l9 -6" />
+        </svg>
+        <p class="end-menu_category_text">Buzón</p>
+      </a>
+      <a class="end-menu_category" href="./pages/construction.html">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-currency-dollar"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#a3a0a0"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          title="Vender"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2"
+          />
+          <path d="M12 3v3m0 12v3" />
+        </svg>
+        <p class="end-menu_category_text">Vender</p>
+      </a>
+      <a class="end-menu_category" href="./pages/construction.html">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-heart"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#a3a0a0"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          title="Favoritos"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+          />
+        </svg>
+        <p class="end-menu_category_text">Favoritos</p>
+      </a>
+      <a class="end-menu_category" href="./pages/construction.html">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-user"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#a3a0a0"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          title="perfil"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+        </svg>
+        <p class="end-menu_category_text">Perfil</p>
+      </a>
     </div>
     <!-- END -- END PAGE -- MENU -->
   </body>
